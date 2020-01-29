@@ -1,0 +1,113 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.scrollview {}
+
+
+.wrap {
+  position: relative;
+  box-sizing: border-box;
+  width: 80%;
+  margin: 15Px auto;
+  padding: 0 15Px;
+  height: 1920Px;
+
+  .inner {
+    height: 1920Px;
+  }
+
+  .fifteenLine {
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background: #a5a5a5;
+  }
+
+  &::-webkit-scrollbar {
+    width: 0;
+  }
+
+  .bg {
+    left: 60Px;
+  }
+
+  .hour-line-wrap,
+  .current-time-line-wrap {
+    position: absolute;
+    width: 100%;
+    font-size: 0;
+  }
+
+  .hour-line,
+  .current-time-line {
+    display: inline-block;
+    width: calc(100% - 50Px);
+    height: 1Px;
+    vertical-align: top;
+    // vertical-align: middle;
+  }
+
+  .hour-line {
+    background: #6cc2e2;
+  }
+
+  .selected-area,
+  .disabled-time {
+    position: absolute;
+    width: 80%;
+    right: 0;
+    background: yellow;
+  }
+
+  .disabled-time {
+    background: #eee;
+  }
+
+  .hour-text,
+  .current-time-text {
+    margin-right: 10Px;
+    font-size: 12Px;
+    margin-top: -8Px;
+    display: inline-block;
+  }
+
+  .bg {
+    position: absolute;
+    height: 1920Px;
+    width: 100%;
+  }
+
+  .fifteenLine {
+    width: 80%;
+    height: 1Px;
+    background: #eee;
+  }
+
+  .current-time-line {
+    background: red;
+  }
+
+  .submit-btn {
+    position: absolute;
+    background: #fff;
+    top: 100%;
+    right: 20Px;
+    width: 66Px;
+    height: 30Px;
+    line-height: 30Px;
+    z-index: 9;
+
+    text {
+      display: inline-block;
+      font-size: 12Px;
+      color: blue;
+
+      &:first-of-type {
+        margin-right: 5Px;
+        color: #a5a5a5;
+      }
+    }
+  }
+}

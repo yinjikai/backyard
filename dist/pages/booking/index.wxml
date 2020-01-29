@@ -1,0 +1,5 @@
+<block wx:if="{{$taroCompReady}}">
+    <view class="activity-page">
+        <time-range compid="{{$compid__12}}"></time-range>
+    </view>
+</block>

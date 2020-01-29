@@ -1,0 +1,22 @@
+<block wx:if="{{$taroCompReady}}">
+    <view class="index-wrap">
+        <button class="booking-btn" bindtap="anonymousFunc0">预 约</button>
+        <block wx:if="{{!userInfo && showAuthBtn}}">
+            <button open-type="getUserInfo" bindgetuserinfo="anonymousFunc1" class="auth_btn">授权</button>
+        </block>
+        <block>
+            <block wx:if="{{anonymousState__temp}}">
+                <view>
+                    <view class="title">我的预约</view>
+                    <view class="booking-list">
+                        <view class="booking-item" wx:for="{{loopArray200}}" wx:for-item="item" wx:for-index="__index2"><text>{{item.project}}</text>  <text>{{item.timeRange}}</text>  <text bindtap="anonymousFunc2" class="cancel-btn" data-e-tap-so="this" data-e-tap-a-a="{{item._$indexKey}}">取消</text>
+                        </view>
+                    </view>
+                </view>
+            </block>
+            <block wx:else>
+                <view class="empty-wrap">暂无预约记录~</view>
+            </block>
+        </block>
+    </view>
+</block>

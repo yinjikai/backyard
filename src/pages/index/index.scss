@@ -1,0 +1,67 @@
+.index-wrap {
+  .booking-btn {
+    width: 100Px;
+    height: 100Px;
+    background: #ffd635;
+    ;
+    border-radius: 50%;
+    color: #fff;
+    line-height: 100Px;
+    text-align: center;
+    margin: 20Px auto;
+  }
+
+  .title {
+    width: 200Px;
+    text-align: center;
+    margin: 15Px auto 0;
+    color: #000;
+  }
+
+  .empty-wrap {
+    width: 80%;
+    margin: 15Px auto 0;
+    color: #eee;
+    font-size: 14Px;
+    text-align: center;
+  }
+
+  .booking-list {
+    width: 80%;
+    margin: 15Px auto 0;
+    border: 1px solid #eee;
+
+    .booking-item {
+      maigin-bottom: 5Px;
+      border-bottom: 1px solid #eee;
+      display: flex;
+
+      &:last-child {
+        border: none;
+      }
+
+      text {
+        text-align: center;
+        width: 50%;
+        padding: 3Px;
+        line-height: 28Px;
+
+        &:first-of-type {
+          border-right: 1px solid #eee;
+        }
+      }
+    }
+  }
+
+  .auth_btn {
+    width: 80%;
+    margin: 15Px auto;
+  }
+
+  .cancel-btn {
+    font-size: 12Px;
+    color: #0064bd;
+    line-height: 28Px;
+    border-left: 1Px solid #eee;
+  }
+}

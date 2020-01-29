@@ -1,0 +1,15 @@
+<block wx:if="{{$taroCompReady}}">
+    <view class="form-wrap">
+        <form bindsubmit="anonymousFunc0">
+            <view class="picker-wrap">
+                <picker mode="selector" bindchange="anonymousFunc1" value="{{project}}" range="{{projects}}" name="project">
+                    <view class="picker">项目：{{project}}</view>
+                </picker>
+                <picker mode="selector" bindchange="anonymousFunc2" value="{{technician}}" range="{{technicians}}" name="technician">
+                    <view class="picker">技师：{{technician}}</view>
+                </picker>
+                <button form-type="submit" class="submit-btn">提交</button>
+            </view>
+        </form>
+    </view>
+</block>
