@@ -4,16 +4,16 @@
   "description": "",
   "appid": "wx4dee33f81ad1d7c0",
   "setting": {
-    "urlCheck": true,
+    "urlCheck": false,
     "es6": true,
     "enhance": true,
     "postcss": true,
-    "preloadBackgroundData": true,
+    "preloadBackgroundData": false,
     "minified": true,
     "newFeature": true,
     "coverView": true,
     "nodeModules": true,
-    "autoAudits": true,
+    "autoAudits": false,
     "uglifyFileName": true,
     "checkInvalidKey": true,
     "checkSiteMap": true,
@@ -23,7 +23,7 @@
       "disablePlugins": [],
       "outputPath": ""
     },
-    "bundle": true
+    "bundle": false
   },
   "compileType": "miniprogram",
   "simulatorType": "wechat",

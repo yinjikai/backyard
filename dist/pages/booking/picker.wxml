@@ -1,6 +1,6 @@
 <template name="renderHourView">
     <block>
-        <view style="{{item.$loopState__temp2}}" class="hour-line-wrap" wx:for="{{loopArray150}}" wx:for-item="item" wx:for-index="index"><text class="hour-text">{{index}}:00</text>
+        <view style="{{item.$loopState__temp2}}" class="hour-line-wrap" wx:for="{{loopArray1}}" wx:for-item="item" wx:for-index="index"><text class="hour-text">{{index}}:00</text>
             <view class="hour-line"></view>
         </view>
     </block>
@@ -14,7 +14,7 @@
 </template>
 <template name="renderFifTeenView">
     <block>
-        <view style="{{item.$loopState__temp6}}" class="fifteenLine" wx:for="{{loopArray151}}" wx:for-item="item" wx:for-index="index"></view>
+        <view style="{{item.$loopState__temp6}}" class="fifteenLine" wx:for="{{loopArray2}}" wx:for-item="item" wx:for-index="index"></view>
     </block>
 </template>
 <template name="renderBg">
@@ -27,7 +27,7 @@
 <template name="renderDisableTime">
     <block>
         <block wx:if="{{disableTime}}">
-            <view class="disabled-time" style="{{item.$loopState__temp9}}" wx:for="{{loopArray152}}" wx:for-item="item" wx:for-index="_anonIdx2">该时段不可用</view>
+            <view class="disabled-time" style="{{item.$loopState__temp9}}" wx:for="{{loopArray3}}" wx:for-item="item" wx:for-index="_anonIdx2">该时段不可用</view>
         </block>
     </block>
 </template>
@@ -41,7 +41,7 @@
 </template>
 <block wx:if="{{$taroCompReady}}">
     <scroll-view class="scrollview" scroll-y="{{true}}" scroll-with-animation="{{true}}" scroll-into-view="currentTimeLine" scroll-top="{{0}}" style="{{anonymousState__temp16}}" catchscroll="onScroll">
-        <view class="wrap" bindtouchmove="handleTouchMove" catchtouchstart="handleTouchStart" id="chjzz">
+        <view class="wrap" bindtouchmove="handleTouchMove" catchtouchstart="handleTouchStart" id="hzzzz">
             <template is="renderBg" data="{{...anonymousState__temp11}}"></template>
             <template is="renderHourView" data="{{...anonymousState__temp12}}"></template>
             <template is="renderCurrentTimeView" data="{{...anonymousState__temp13}}"></template>

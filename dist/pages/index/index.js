@@ -1,6 +1,6 @@
 (wx["webpackJsonp"] = wx["webpackJsonp"] || []).push([[5],{
 
-/***/ 8:
+/***/ 10:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -20,13 +20,13 @@ var _taroWeapp = __webpack_require__(0);
 
 var _taroWeapp2 = _interopRequireDefault(_taroWeapp);
 
-__webpack_require__(9);
+__webpack_require__(11);
 
-var _api = __webpack_require__(21);
+var _api = __webpack_require__(1);
 
 var service = _interopRequireWildcard(_api);
 
-var _index = __webpack_require__(22);
+var _index = __webpack_require__(2);
 
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
 
@@ -46,7 +46,7 @@ var Index = function (_Taro$Component) {
 
     var _this = _possibleConstructorReturn(this, (Index.__proto__ || Object.getPrototypeOf(Index)).apply(this, arguments));
 
-    _this.$usedState = ["anonymousState__temp", "loopArray200", "userInfo", "showAuthBtn", "bookingList"];
+    _this.$usedState = ["anonymousState__temp", "loopArray0", "userInfo", "showAuthBtn", "bookingList"];
     _this.anonymousFunc2Map = {};
     _this.customComponents = [];
     return _this;
@@ -200,7 +200,7 @@ var Index = function (_Taro$Component) {
       this.anonymousFunc0 = handleBookingBtnClick;
       this.anonymousFunc1 = getUserInfoManual;
       var anonymousState__temp = _taroWeapp2.default.getStorageSync('userInfo') && bookingList && bookingList.length > 0;
-      var loopArray200 = anonymousState__temp ? bookingList.map(function (item, __index2) {
+      var loopArray0 = anonymousState__temp ? bookingList.map(function (item, __index2) {
         item = {
           $original: (0, _taroWeapp.internal_get_original)(item)
         };
@@ -209,7 +209,7 @@ var Index = function (_Taro$Component) {
             timeRange = _item$$original.timeRange,
             _id = _item$$original._id;
 
-        var _$indexKey = "dchzz" + __index2;
+        var _$indexKey = "azzzz" + __index2;
         _this2.anonymousFunc2Map[_$indexKey] = cancelBooking(_id);
         return {
           project: project,
@@ -221,7 +221,7 @@ var Index = function (_Taro$Component) {
       }) : [];
       Object.assign(this.__state, {
         anonymousState__temp: anonymousState__temp,
-        loopArray200: loopArray200,
+        loopArray0: loopArray0,
         userInfo: userInfo,
         showAuthBtn: showAuthBtn,
         bookingList: bookingList
@@ -264,11 +264,11 @@ Component(__webpack_require__(0).default.createComponent(Index, true));
 
 /***/ }),
 
-/***/ 9:
+/***/ 11:
 /***/ (function(module, exports, __webpack_require__) {
 
 // extracted by mini-css-extract-plugin
 
 /***/ })
 
-},[[8,0,1]]]);
+},[[10,0,1]]]);

@@ -5,11 +5,99 @@
 "use strict";
 
 
-module.exports = __webpack_require__(3).default;
+module.exports = __webpack_require__(5).default;
 module.exports.default = module.exports;
 
 /***/ }),
 /* 1 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.getBookingList = getBookingList;
+exports.getDisabledTime = getDisabledTime;
+exports.addAppointment = addAppointment;
+exports.cancelBooking = cancelBooking;
+exports.getUserInfo = getUserInfo;
+exports.getTechnicianList = getTechnicianList;
+exports.getProjectList = getProjectList;
+var server = "https://applet.i7cloud.cn";
+var api = {
+  getBookingList: server + "/getBookingList",
+  getDisabledTime: server + "/getDisabledTime",
+  addAppointment: server + "/addAppointment",
+  cancelBooking: server + "/cancelBooking",
+  getUserInfo: server + "/getUserInfo",
+  getProjectList: server + "/getProjectList",
+  getTechnicianList: server + "/getTechnicianList"
+};
+
+function getBookingList() {
+  var user = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : "";
+
+  return api.getBookingList + "?user=" + user;
+}
+
+function getDisabledTime() {
+  var user = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : "";
+
+  return api.getDisabledTime + "?user=" + user;
+}
+function addAppointment(params) {
+  return api.addAppointment;
+}
+function cancelBooking(id) {
+  return api.cancelBooking + "?id=" + id;
+}
+function getUserInfo(code) {
+  return api.getUserInfo + "?code=" + code;
+}
+
+function getTechnicianList() {
+  return api.getTechnicianList;
+}
+function getProjectList() {
+  return api.getProjectList;
+}
+
+/***/ }),
+/* 2 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.genToken = genToken;
+exports.handleRequestException = handleRequestException;
+
+var _taroWeapp = __webpack_require__(0);
+
+var _taroWeapp2 = _interopRequireDefault(_taroWeapp);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function genToken(token) {
+  return "Bearer " + token;
+}
+function handleRequestException() {
+  _taroWeapp2.default.showToast({
+    title: "啊哦出错了，请稍后再试",
+    icon: none,
+    duration: 2000
+  }).then(function () {
+    _taroWeapp2.default.navigateTo("/pages/index/index");
+  });
+}
+
+/***/ }),
+/* 3 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -39,8 +127,8 @@ try {
 module.exports = g;
 
 /***/ }),
-/* 2 */,
-/* 3 */
+/* 4 */,
+/* 5 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -50,7 +138,7 @@ var _typeof2 = typeof Symbol === "function" && typeof Symbol.iterator === "symbo
 
 Object.defineProperty(exports, '__esModule', { value: true });
 
-var taro = __webpack_require__(5);
+var taro = __webpack_require__(7);
 
 function _typeof(obj) {
   if (typeof Symbol === "function" && _typeof2(Symbol.iterator) === "symbol") {
@@ -3698,10 +3786,10 @@ initNativeApi(Taro);
 exports.Taro = Taro;
 exports.default = Taro;
 //# sourceMappingURL=index.js.map
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(1), __webpack_require__(4)))
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(3), __webpack_require__(6)))
 
 /***/ }),
-/* 4 */
+/* 6 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3894,17 +3982,17 @@ process.umask = function () {
 };
 
 /***/ }),
-/* 5 */
+/* 7 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-module.exports = __webpack_require__(6).default;
+module.exports = __webpack_require__(8).default;
 module.exports.default = module.exports;
 
 /***/ }),
-/* 6 */
+/* 8 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -6606,28 +6694,29 @@ exports.getIsUsingDiff = getIsUsingDiff;
 exports.setIsUsingDiff = setIsUsingDiff;
 exports.default = index;
 //# sourceMappingURL=index.js.map
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(1)))
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(3)))
 
 /***/ }),
-/* 7 */,
-/* 8 */,
 /* 9 */,
 /* 10 */,
 /* 11 */,
 /* 12 */,
 /* 13 */,
-/* 14 */
+/* 14 */,
+/* 15 */,
+/* 16 */,
+/* 17 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
 if (false) {} else {
-  module.exports = __webpack_require__(15);
+  module.exports = __webpack_require__(18);
 }
 
 /***/ }),
-/* 15 */
+/* 18 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -6648,8 +6737,8 @@ if (true) {
   (function () {
     'use strict';
 
-    var _assign = __webpack_require__(16);
-    var checkPropTypes = __webpack_require__(17);
+    var _assign = __webpack_require__(19);
+    var checkPropTypes = __webpack_require__(20);
 
     // TODO: this is special because it gets imported during build.
 
@@ -8898,7 +8987,7 @@ if (true) {
 }
 
 /***/ }),
-/* 16 */
+/* 19 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -8994,7 +9083,7 @@ module.exports = shouldUseNative() ? Object.assign : function (target, source) {
 };
 
 /***/ }),
-/* 17 */
+/* 20 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -9012,7 +9101,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 var printWarning = function printWarning() {};
 
 if (true) {
-  var ReactPropTypesSecret = __webpack_require__(18);
+  var ReactPropTypesSecret = __webpack_require__(21);
   var loggedTypeFailures = {};
   var has = Function.call.bind(Object.prototype.hasOwnProperty);
 
@@ -9092,7 +9181,7 @@ checkPropTypes.resetWarningCache = function () {
 module.exports = checkPropTypes;
 
 /***/ }),
-/* 18 */
+/* 21 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -9108,85 +9197,6 @@ module.exports = checkPropTypes;
 var ReactPropTypesSecret = 'SECRET_DO_NOT_PASS_THIS_OR_YOU_WILL_BE_FIRED';
 
 module.exports = ReactPropTypesSecret;
-
-/***/ }),
-/* 19 */,
-/* 20 */,
-/* 21 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.getBookingList = getBookingList;
-exports.getDisabledTime = getDisabledTime;
-exports.addAppointment = addAppointment;
-exports.cancelBooking = cancelBooking;
-exports.getUserInfo = getUserInfo;
-var server = "https://applet.i7cloud.cn";
-var api = {
-  getBookingList: server + "/getBookingList",
-  getDisabledTime: server + "/getDisabledTime",
-  addAppointment: server + "/addAppointment",
-  cancelBooking: server + "/cancelBooking",
-  getUserInfo: server + "/getUserInfo"
-};
-
-function getBookingList() {
-  var user = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : "";
-
-  return api.getBookingList + "?user=" + user;
-}
-
-function getDisabledTime() {
-  var user = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : "";
-
-  return api.getDisabledTime + "?user=" + user;
-}
-function addAppointment(params) {
-  return api.addAppointment;
-}
-function cancelBooking(id) {
-  return api.cancelBooking + "?id=" + id;
-}
-function getUserInfo(code) {
-  return api.getUserInfo + "?code=" + code;
-}
-
-/***/ }),
-/* 22 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.genToken = genToken;
-exports.handleRequestException = handleRequestException;
-
-var _taroWeapp = __webpack_require__(0);
-
-var _taroWeapp2 = _interopRequireDefault(_taroWeapp);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function genToken(token) {
-  return "Bearer " + token;
-}
-function handleRequestException() {
-  _taroWeapp2.default.showToast({
-    title: "啊哦出错了，请稍后再试",
-    icon: none,
-    duration: 2000
-  }).then(function () {
-    _taroWeapp2.default.navigateTo("/pages/index/index");
-  });
-}
 
 /***/ })
 ]]);

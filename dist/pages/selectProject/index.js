@@ -1,6 +1,6 @@
 (wx["webpackJsonp"] = wx["webpackJsonp"] || []).push([[6],{
 
-/***/ 11:
+/***/ 14:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -20,13 +20,13 @@ var _taroWeapp = __webpack_require__(0);
 
 var _taroWeapp2 = _interopRequireDefault(_taroWeapp);
 
-__webpack_require__(12);
+__webpack_require__(15);
 
-var _api = __webpack_require__(21);
+var _api = __webpack_require__(1);
 
 var service = _interopRequireWildcard(_api);
 
-var _index = __webpack_require__(22);
+var _index = __webpack_require__(2);
 
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
 
@@ -49,7 +49,7 @@ var CreateActivity = function (_Taro$Component) {
 
     var _this = _possibleConstructorReturn(this, (CreateActivity.__proto__ || Object.getPrototypeOf(CreateActivity)).apply(this, arguments));
 
-    _this.$usedState = ["project", "projects", "technician", "technicians"];
+    _this.$usedState = ["project", "projectList", "technician", "technicianList"];
     _this.customComponents = [];
     return _this;
   }
@@ -80,6 +80,16 @@ var CreateActivity = function (_Taro$Component) {
           technician = _useState4[0],
           setTechnician = _useState4[1];
 
+      var _useState5 = (0, _taroWeapp.useState)(projects),
+          _useState6 = _slicedToArray(_useState5, 2),
+          projectList = _useState6[0],
+          setProjectList = _useState6[1];
+
+      var _useState7 = (0, _taroWeapp.useState)(technicians),
+          _useState8 = _slicedToArray(_useState7, 2),
+          technicianList = _useState8[0],
+          setTechnicianList = _useState8[1];
+
       var handleSubmit = function handleSubmit(e, data) {
         var value = e.detail.value;
 
@@ -108,20 +118,56 @@ var CreateActivity = function (_Taro$Component) {
           }
         });
       };
+      (0, _taroWeapp.useEffect)(function () {
+        _taroWeapp2.default.request({
+          url: service.getTechnicianList(),
+          method: 'GET',
+          header: {
+            'content-type': 'application/json',
+            authorization: (0, _index.genToken)(_taroWeapp2.default.getStorageSync('token'))
+          }
+        }).then(function (res) {
+          var _res$data = res.data,
+              code = _res$data.code,
+              data = _res$data.data;
+
+          if (code == 200) {
+            setTechnicianList(data);
+          }
+        });
+      }, []);
+      (0, _taroWeapp.useEffect)(function () {
+        _taroWeapp2.default.request({
+          url: service.getProjectList(),
+          method: 'GET',
+          header: {
+            'content-type': 'application/json',
+            authorization: (0, _index.genToken)(_taroWeapp2.default.getStorageSync('token'))
+          }
+        }).then(function (res) {
+          var _res$data2 = res.data,
+              code = _res$data2.code,
+              data = _res$data2.data;
+
+          if (code == 200) {
+            setProjectList(data);
+          }
+        });
+      }, []);
       var onProjectSelect = function onProjectSelect(e) {
-        setProject(projects[e.detail.value]);
+        setProject(projectList[e.detail.value]);
       };
       var onTechnicianSelect = function onTechnicianSelect(e) {
-        setTechnician(technicians[e.detail.value]);
+        setTechnician(technicianList[e.detail.value]);
       };
       this.anonymousFunc0 = handleSubmit;
       this.anonymousFunc1 = onProjectSelect;
       this.anonymousFunc2 = onTechnicianSelect;
       Object.assign(this.__state, {
         project: project,
-        projects: projects,
+        projectList: projectList,
         technician: technician,
-        technicians: technicians
+        technicianList: technicianList
       });
       return this.__state;
     }
@@ -153,11 +199,11 @@ Component(__webpack_require__(0).default.createComponent(CreateActivity, true));
 
 /***/ }),
 
-/***/ 12:
+/***/ 15:
 /***/ (function(module, exports, __webpack_require__) {
 
 // extracted by mini-css-extract-plugin
 
 /***/ })
 
-},[[11,0,1]]]);
+},[[14,0,1]]]);

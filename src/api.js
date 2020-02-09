@@ -4,7 +4,9 @@ const api = {
   getDisabledTime: `${server}/getDisabledTime`,
   addAppointment: `${server}/addAppointment`,
   cancelBooking: `${server}/cancelBooking`,
-  getUserInfo: `${server}/getUserInfo`
+  getUserInfo: `${server}/getUserInfo`,
+  getProjectList: `${server}/getProjectList`,
+  getTechnicianList: `${server}/getTechnicianList`
 };
 
 export function getBookingList(user = "") {
@@ -22,4 +24,11 @@ export function cancelBooking(id) {
 }
 export function getUserInfo(code) {
   return `${api.getUserInfo}?code=${code}`;
+}
+
+export function getTechnicianList() {
+  return api.getTechnicianList;
+}
+export function getProjectList() {
+  return api.getProjectList;
 }

@@ -3,7 +3,7 @@ require("./vendors");
 
 (wx["webpackJsonp"] = wx["webpackJsonp"] || []).push([[2],{
 
-/***/ 2:
+/***/ 4:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -19,7 +19,7 @@ var _taroWeapp = __webpack_require__(0);
 
 var _taroWeapp2 = _interopRequireDefault(_taroWeapp);
 
-__webpack_require__(7);
+__webpack_require__(9);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -109,11 +109,11 @@ _taroWeapp2.default.initPxTransform({
 
 /***/ }),
 
-/***/ 7:
+/***/ 9:
 /***/ (function(module, exports, __webpack_require__) {
 
 // extracted by mini-css-extract-plugin
 
 /***/ })
 
-},[[2,0,1]]]);;
+},[[4,0,1]]]);;

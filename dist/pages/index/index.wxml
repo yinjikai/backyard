@@ -9,7 +9,7 @@
                 <view>
                     <view class="title">我的预约</view>
                     <view class="booking-list">
-                        <view class="booking-item" wx:for="{{loopArray200}}" wx:for-item="item" wx:for-index="__index2"><text>{{item.project}}</text>  <text>{{item.timeRange}}</text>  <text bindtap="anonymousFunc2" class="cancel-btn" data-e-tap-so="this" data-e-tap-a-a="{{item._$indexKey}}">取消</text>
+                        <view class="booking-item" wx:for="{{loopArray0}}" wx:for-item="item" wx:for-index="__index2"><text>{{item.project}}</text>  <text>{{item.timeRange}}</text>  <text bindtap="anonymousFunc2" class="cancel-btn" data-e-tap-so="this" data-e-tap-a-a="{{item._$indexKey}}">取消</text>
                         </view>
                     </view>
                 </view>
